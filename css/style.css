@@ -43,12 +43,18 @@ body {
   cursor: pointer; }
   .block1__inner {
     width: 100%;
-    height: 100%; }
+    height: 100%;
+    table-layout: fixed; }
   .block1__content {
-    position: relative;
-    top: 50%;
-    left: 50%;
-    transform: translateX(-50%) translateY(-50%) rotate(-90deg);
+    -webkit-writing-mode: vertical-rl;
+    -ms-writing-mode: tb-rl;
+    writing-mode: vertical-rl;
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+    writing-mode: vertical-lr;
     width: 100vh; }
   .block1 .content {
     text-align: center;
@@ -56,8 +62,8 @@ body {
     font-size: 1.4vw; }
     .block1 .content__arrow {
       position: absolute;
-      top: -0.2vw;
-      left: 76%;
+      top: 1.5vw;
+      left: 78%;
       transform: translateX(-20%) translateY(-20%) rotate(90deg);
       -ms-transform: rotate(-90deg);
       text-align: center;
@@ -70,9 +76,10 @@ body {
         transform: translateX(-20%) translateY(-20%) rotate(-90deg);
         -ms-transform: rotate(-90deg); }
     .block1 .content__title {
-      margin: 0 auto;
-      width: 44vh;
-      min-width: 18vw; }
+      margin-top: -47vh;
+      width: 50vh;
+      text-align: left;
+      padding-left: 12vw; }
   .block1_opened {
     background-color: #87C457; }
 
